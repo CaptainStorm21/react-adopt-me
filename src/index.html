@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div id="root"> not rendered </div>
+
+    <script src="http://unpkg.com/react@16.8.4/umd/react.development.js"></script>
+    <script src="http://unpkg.com/react-dom@16.8.4/umd/react-dom.development.js"></script>
+    <script>
+        //your code is going here
+        const App = () => {
+            return React.createElement(
+                "div",
+                //attributes {}
+                {id:"internal-div"},
+                React.createElement("h1", {}, "Adopt Me!")
+            )
+        }
+
+        ReactDOM.render(React.createElement(App),
+        document.getElementById("root")
+        )
+    </script>
+</body>
+</html>
