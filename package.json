@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier \"src/**/*.{js,css,html}\" --write"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/CaptainStorm21/react-adopt-me/issues"
   },
-  "homepage": "https://github.com/CaptainStorm21/react-adopt-me#readme"
+  "homepage": "https://github.com/CaptainStorm21/react-adopt-me#readme",
+  "devDependencies": {
+    "prettier": "^2.1.1"
+  }
 }

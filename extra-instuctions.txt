@@ -1,0 +1,9 @@
+---Check the version 
+npm -v 
+node -v 
+
+---To test the script 
+npm run test
+
+--To run prettier
+npm run format
