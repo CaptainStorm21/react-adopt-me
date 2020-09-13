@@ -1,12 +1,18 @@
-import React from 'react';
+import React from "react";
 
-//2nd component
-//destructuring
+export default function Pet({ name, animal, breed }) {
+  // older React
+  // return React.createElement("div", {}, [
+  //     React.createElement("h1", {}, name),
+  //     React.createElement("h2", {}, animal),
+  //     React.createElement("h3", {}, breed),
+  // ]);
 
-export default function Pet ({ name, animal, breed }) {
-    return React.createElement("div", {}, [
-        React.createElement("h1", {}, name),
-        React.createElement("h2", {}, animal),
-        React.createElement("h3", {}, breed),
-    ]);
-};
+  return (
+    <div className="animal-box">
+      <h1>{name}</h1>
+      <h2>{animal}</h2>
+      <h3>{breed}</h3>
+    </div>
+  );
+}
