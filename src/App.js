@@ -1,9 +1,11 @@
 //2nd component
-const Pet = (props) => {
+//destructuring
+
+const Pet = ({ name, animal, breed }) => {
     return React.createElement("div", {}, [
-        React.createElement("h1", {}, props.name),
-        React.createElement("h2", {}, props.breed),
-        React.createElement("h3", {}, props.animal),
+        React.createElement("h1", {}, name),
+        React.createElement("h2", {}, animal),
+        React.createElement("h3", {}, breed),
     ])
 }
 
@@ -18,17 +20,19 @@ const App = () => {
         [
             React.createElement("h1", {}, "Adopt Me!"),
             React.createElement(Pet, {
+                key: 1,
                 name: "Lune",
                 animal: "Dog",
                 breed: "Labrador",
-                class: "individual-div",
             }),
             React.createElement(Pet, {
+                key: 2,
                 name: "Alice",
                 animal: "Fox",
                 breed: "Lisao"
             }),
             React.createElement(Pet, {
+                key: 3,
                 name: "Max",
                 animal: "Dog",
                 breed: "English settler"
