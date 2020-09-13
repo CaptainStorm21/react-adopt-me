@@ -322,10 +322,12 @@ header {
     }
 }
 
-
-
 #internal-div {
-    background-color: darkslategray;
+    margin-left: 30px;
     padding: 10px;
     position: fixed absolute;
+}
+
+.individual-div {
+    background-color: white;
 }
