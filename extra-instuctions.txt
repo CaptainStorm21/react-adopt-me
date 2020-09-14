@@ -7,3 +7,5 @@ npm run test
 
 --To run prettier
 npm run format
+
+-- do not use conditions with the hooks
