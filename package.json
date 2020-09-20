@@ -22,6 +22,7 @@
   "homepage": "https://github.com/CaptainStorm21/react-adopt-me#readme",
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-react": "^7.10.4",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
@@ -33,7 +34,7 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.1.1",
-    "@babel/plugin-transform-runtime": "^7.8.3"
+    "react-app-polyfill": "^1.0.6"
   },
   "dependencies": {
     "@frontendmasters/pet": "^1.0.3",
@@ -42,5 +43,10 @@
   },
   "browserlist": [
     "last 2 Chrome versions"
-  ]
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  }
 }
