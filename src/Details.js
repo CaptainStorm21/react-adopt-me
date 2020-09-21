@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import pet from "@frontendmasters/pet";
 import Carousel from './Carousel';
+import ErrorBoundry from './ErrorBoundry'
 
-export default class Details extends Component {
+class Details extends Component {
   state = { loading: true };
   //   constructor(props) {
   //     super(props);
@@ -11,6 +12,7 @@ export default class Details extends Component {
   //     };
   //   }
   componentDidMount() {
+    //throw new Error ("lol");
     //use it for ajax calls
     pet.animal(this.props.id).then(({ animal }) => {
       this.setState({
@@ -44,6 +46,14 @@ export default class Details extends Component {
       </div>
     );
   }
+}
+
+export default function DetailsWithErrorBoundry (props) {
+    return (
+        <ErrorBoundry>
+            <Details {...props}/>
+        </ErrorBoundry>
+    )
 }
 
 // import React from 'react'
