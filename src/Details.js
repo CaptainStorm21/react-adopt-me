@@ -24,7 +24,24 @@ export default class Details extends Component {
     }, console.error);
   }
   render() {
-    return <div></div>;
+    
+    if (this.state.loading){
+        return <h1>loading...</h1>
+    }
+
+    const { animal, breed, location, description, name} = this.state;
+
+    return (
+        <div className = "details ">
+            <div>
+                 <h1> { name } </h1>
+                <h2>{`${animal} - ${ breed } - ${ location }`}</h2>
+                <p> { description } </p>
+                <button> Adopt {name}</button>
+            </div>
+
+        </div>
+    )
   }
 }
 
